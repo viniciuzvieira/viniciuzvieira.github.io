@@ -8,8 +8,8 @@
  function draw(){
   context.clearRect(0,0,48,40);context.strokeStyle='rgba(44,100,80,.5)';context.beginPath();context.arc(24,20,radius,0,turn);context.stroke();
   for(let band=1;band<6;band++){const latitude=-Math.PI/2+band*Math.PI/6,r=radius*Math.cos(latitude);context.beginPath();context.ellipse(24,20+radius*Math.sin(latitude)*Math.cos(tilt),r,r*Math.sin(tilt),0,0,turn);context.stroke();}
-  for(let meridian=0;meridian<10;meridian++){const longitude=meridian*turn/10,depth=(Math.cos(longitude+angle)+1)/2,opacity=.15+.7*depth*depth*(3-2*depth);context.strokeStyle=meridian===0?`rgba(172,60,23,${opacity})`:`rgba(44,100,80,${opacity})`;context.beginPath();for(let step=0;step<=48;step++){const vertex=point(-Math.PI/2+step*Math.PI/48,longitude);if(!step)context.moveTo(vertex.x,vertex.y);else context.lineTo(vertex.x,vertex.y);}context.stroke();}
-  const marker=point(0,0);context.fillStyle=`rgba(172,60,23,${.18+.82*(marker.z+1)/2})`;context.beginPath();context.arc(marker.x,marker.y,1.25,0,turn);context.fill();
+  for(let meridian=0;meridian<10;meridian++){const longitude=meridian*turn/10,depth=(Math.cos(longitude+angle)+1)/2,opacity=.15+.7*depth*depth*(3-2*depth);context.strokeStyle=meridian===0?`rgba(11,81,75,${opacity})`:`rgba(44,100,80,${opacity})`;context.beginPath();for(let step=0;step<=48;step++){const vertex=point(-Math.PI/2+step*Math.PI/48,longitude);if(!step)context.moveTo(vertex.x,vertex.y);else context.lineTo(vertex.x,vertex.y);}context.stroke();}
+  const marker=point(0,0);context.fillStyle=`rgba(11,81,75,${.18+.82*(marker.z+1)/2})`;context.beginPath();context.arc(marker.x,marker.y,1.25,0,turn);context.fill();
  }
  function tick(time){if(lastFrame!==null)angle=(angle+(time-lastFrame)*turn/6000)%turn;lastFrame=time;draw();animation=requestAnimationFrame(tick);}
  function sync(){cancelAnimationFrame(animation);lastFrame=null;draw();if(!reducedMotion.matches&&!document.hidden)animation=requestAnimationFrame(tick);}
