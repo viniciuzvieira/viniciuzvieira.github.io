@@ -8,7 +8,7 @@ Desenvolvedor sênior full stack em São Paulo. Software, integrações e IA ori
 - **Dados e cloud:** SQL Server, PostgreSQL, Oracle, Firebase, Cosmos DB e Azure.
 - **IA no desenvolvimento:** Claude Code e Codex e SDD (Spec-Driven Development), com OpenSpec.
 
-[Portfólio ao vivo](https://viniciuzvieira.github.io/) · [LinkedIn](https://www.linkedin.com/in/viniciuzvieira/) · [Currículo em PDF](dist/docs/Vinicius_Silva_CV.pdf) · [E-mail](mailto:vinicius.silva@zcore.com.br)
+[Portfólio ao vivo](https://viniciuzvieira.github.io/) · [LinkedIn](https://www.linkedin.com/in/viniciuzvieira/) · [Currículo em PDF](dist/docs/Vinicius_Vieira_CV.pdf) · [E-mail](mailto:vinicius.silva@zcore.com.br)
 
 ## Portfólio
 
