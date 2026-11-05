@@ -77,3 +77,4 @@
 
 /* Reserve the opening viewport; the facts strip begins in the next section. */
 .hero{min-height:calc(100vh - 81px);min-height:calc(100svh - 81px)}
+@media(min-width:901px){.network-diagram .system-block,.network-diagram .system-block:not(.azure-block),.network-diagram .azure-block{padding-top:4px;padding-bottom:9px}.network-diagram .system-block span{margin-top:2px;line-height:1.3}}
