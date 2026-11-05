@@ -33,6 +33,5 @@
  out.append(el('p','micro methodology','Nota = média ponderada da cobertura declarada. Azure recebe peso 3 por atuação desde 2019 e certificação; .NET, REST e Kafka recebem peso 2. Requisitos desejáveis têm metade do peso. Outros requisitos não reconhecidos precisam de avaliação humana.'));
  document.querySelector('#analysis-steps').textContent=`✓ ${results.length} requisitos reconhecidos (${results.filter(s=>!s.optional).length} principais · ${results.filter(s=>s.optional).length} desejáveis)\n✓ Comparados com experiência e comprovantes\n✓ Nota ponderada atualizada em tempo real`;
  }
- document.querySelectorAll('.context-chips button').forEach(b=>b.addEventListener('click',()=>b.setAttribute('aria-pressed',String(b.getAttribute('aria-pressed')!=='true'))));
  document.querySelector('#example').addEventListener('click',()=>{input.value=draft;analyze();input.focus();});document.querySelector('#fit-form').addEventListener('submit',e=>{e.preventDefault();analyze();});input.addEventListener('input',analyze);input.value=draft;analyze();
 })();
