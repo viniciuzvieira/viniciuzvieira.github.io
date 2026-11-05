@@ -57,3 +57,20 @@
 @media(min-width:901px) and (max-width:1150px){.header-inner{gap:12px}.brand{gap:8px}.brand b{font-size:13px}.brand small{font-size:11px}nav{gap:12px}nav a{font-size:12px}.header-cv{font-size:12px;padding-inline:10px}.brand-orb{width:54px;height:45px;flex-basis:54px}}
 @media(max-width:900px){nav a{font-size:15px}}
 @media(max-width:620px){.brand-orb{width:43px;height:36px;flex-basis:43px}.brand b{font-size:12px}.brand small{font-size:10px}.header-inner{gap:8px}.header-cv{font-size:12px}.brand{gap:6px}}
+/* Keep the complete figure within the opening desktop section. */
+@media(min-width:901px){
+.hero{padding-block:24px 28px;min-height:0;gap:40px}
+.network-diagram{height:480px!important}
+.agent-box{top:12px;min-height:76px;padding:9px 12px}
+.network-diagram .system-blocks{top:100px;gap:8px}
+.network-diagram .system-block,.network-diagram .system-block:not(.azure-block),.network-diagram .azure-block{height:44px;min-height:44px;padding:5px 10px}
+.network-diagram .scan-portrait{top:125px;height:295px;width:43%}
+.network-diagram .diagram-label{top:103px}
+.network-diagram .vertical-label{top:135px}
+.apps-panel{top:320px;padding:8px 10px}
+.apps-panel strong{font-size:32px}.apps-grid{margin-top:8px}
+.network-diagram .sdd-box{top:410px;padding-top:6px}
+.network-diagram .sdd-box strong{font-size:26px;margin-top:2px}
+.network-diagram .sdd-steps{margin-top:3px;font-size:8px}
+}
+@media(min-width:901px){.network-diagram .sdd-box{top:398px}.network-diagram .sdd-steps{line-height:1.4}}
