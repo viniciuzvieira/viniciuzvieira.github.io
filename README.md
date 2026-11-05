@@ -6,7 +6,7 @@ Desenvolvedor sênior full stack em São Paulo. Software, integrações e IA ori
 - **Frontend:** React, Vue.js, Nuxt e Angular.
 - **Integrações:** arquitetura orientada a eventos, Kafka e webhooks.
 - **Dados e cloud:** SQL Server, PostgreSQL, Oracle, Firebase, Cosmos DB e Azure.
-- **IA no desenvolvimento:** Codex e SDD (Spec-Driven Development).
+- **IA no desenvolvimento:** Claude Code e Codex e SDD (Spec-Driven Development), com OpenSpec.
 
 [Portfólio ao vivo](https://viniciuzvieira.github.io/) · [LinkedIn](https://www.linkedin.com/in/viniciuzvieira/) · [Currículo em PDF](dist/docs/Vinicius_Silva_CV.pdf) · [E-mail](mailto:vinicius.silva@zcore.com.br)
 
@@ -14,7 +14,7 @@ Desenvolvedor sênior full stack em São Paulo. Software, integrações e IA ori
 
 Site estático responsivo, com linguagem visual inspirada em [vidaltech.cloud](https://www.vidaltech.cloud/), adaptado à minha trajetória e aos meus comprovantes.
 
-- Comparador local de competências com evidências do currículo.
+- Análise de aderência em tempo real, com nota ponderada, gráficos e evidências do currículo.
 - Linha do tempo profissional e frentes de atuação.
 - Fluxo de desenvolvimento com IA e SDD.
 - Galeria com seis comprovantes, filtros, imagens ampliáveis e links para as fontes.
@@ -46,4 +46,4 @@ O workflow `.github/workflows/pages.yml` publica a pasta `dist` a cada alteraç�
 
 As datas da trajetória foram conferidas no LinkedIn e a conclusão da graduação segue o certificado do Senac (2019). O curso preparatório de AWS é identificado como curso, separado da certificação Microsoft AZ-900.
 
-Projeto produzido com apoio do Codex. Não há conteúdo ou credenciais de projetos corporativos neste repositório.
+Projeto produzido com apoio do Claude Code e Codex. Não há conteúdo ou credenciais de projetos corporativos neste repositório.

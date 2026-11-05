@@ -29,36 +29,4 @@ menu.addEventListener('click',()=>{const expanded=menu.getAttribute('aria-expand
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menu');}));
 document.querySelector('.brand').addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menu');});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menu');}});
-const motion=document.querySelector('#motion');
-motion.addEventListener('click',()=>{const paused=motion.getAttribute('aria-pressed')!=='true';motion.setAttribute('aria-pressed',String(paused));motion.textContent=paused?'▷ Animar fluxos':'Ⅱ Pausar fluxos';document.querySelectorAll('.wires').forEach(s=>paused?s.pauseAnimations():s.unpauseAnimations());});
-if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.wires').forEach(s=>s.pauseAnimations());motion.setAttribute('aria-pressed','true');motion.textContent='▷ Animar fluxos';}
 document.querySelector('#year').textContent=String(new Date().getFullYear());
-const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-const competencies=[
- ['.NET / C#',/(?:\.net|dotnet|asp\.?net|c#(?=\W|$)|csharp)/,'APIs e serviços .NET na Reply, desde 2019.','#experiencia'],
- ['React',/\breact(?:js|\.js)?\b/,'Desenvolvimento de interfaces e uso de hooks React.','#experiencia'],
- ['Vue / Nuxt',/\b(?:vue(?:js|\.js)?|nuxt(?:js|\.js)?)\b/,'Experiência com Vue.js e Nuxt em aplicações frontend.','#pratica'],
- ['Angular',/\bangular\b/,'Angular integra a experiência frontend registrada no currículo.','#certificados'],
- ['Node.js',/\bnode(?:\.?js)?\b/,'Desenvolvimento de backend com Node.js.','#experiencia'],
- ['Java',/\bjava\b/,'Java integra o conjunto de competências de backend.','#certificados'],
- ['APIs REST',/\b(?:api[s]?|rest|restful)\b/,'Desenvolvimento e integração de APIs e serviços.','#pratica'],
- ['Kafka / Eventos',/\b(?:kafka|eventos?|event.driven|mensageria)\b/,'Experiência com arquitetura orientada a eventos e Kafka.','#pratica'],
- ['Webhooks',/\bwebhooks?\b/,'Desenvolvimento de webhooks para integração entre sistemas.','#pratica'],
- ['SQL / Bancos de dados',/\b(?:sql|postgresql|oracle|bancos? de dados|database|modelagem)\b/,'Base em SQL Server e experiência com PostgreSQL e Oracle.','#experiencia'],
- ['NoSQL',/\b(?:nosql|firebase|cosmos\s?db)\b/,'Experiência com Firebase e Cosmos DB (Azure).','#certificados'],
- ['Azure',/\b(?:azure|az-900)\b/,'Atuação com Azure e certificação Microsoft Azure Fundamentals.','#certificados'],
- ['SDD / Codex / IA',/\b(?:sdd|codex|spec.driven|inteligencia artificial|ia|ai.assisted|ai)\b/,'Desenvolvimento assistido por IA, guiado por especificações e critérios de aceitação.','#ia'],
- ['Inglês',/\b(?:ingles|english)\b/,'Inglês avançado declarado no currículo.','#perguntas']
-];
-const toConfirm=[['AWS em produção',/\baws\b/,'Há um curso preparatório em AWS; atuação em produção precisa ser conversada.'],['Docker',/\bdocker\b/,'Profundidade e experiência de uso a confirmar em entrevista.'],['Kubernetes',/\b(?:kubernetes|k8s)\b/,'Profundidade e experiência de uso a confirmar em entrevista.'],['Terraform',/\bterraform\b/,'Competência sem evidência detalhada no currículo atual.'],['Python',/\bpython\b/,'Competência sem evidência detalhada no currículo atual.'],['Liderança formal',/\b(?:tech lead|lideranca|gestao de pessoas)\b/,'Há colaboração com times; responsabilidade formal de liderança a confirmar.'],['Spring',/\bspring(?: boot)?\b/,'Há Java no conjunto de competências; experiência com Spring a confirmar.']];
-document.querySelector('#example').addEventListener('click',()=>{document.querySelector('#job').value='Buscamos Desenvolvedor Sênior Full Stack com C# e .NET, React ou Vue, APIs REST, Kafka e webhooks. Experiência com Azure, SQL Server e desenvolvimento com IA usando Codex e SDD. Desejável experiência com Kubernetes.';document.querySelector('#job').focus();});
-document.querySelector('#fit-form').addEventListener('submit',e=>{
- e.preventDefault();const value=normalize(document.querySelector('#job').value.trim());if(!value)return;
- const matches=competencies.filter(c=>c[1].test(value)),pending=toConfirm.filter(c=>c[1].test(value));
- document.querySelector('#fit-empty').hidden=true;const out=document.querySelector('#fit-output');out.hidden=false;out.replaceChildren();
- const head=document.createElement('div');head.className='result-heading';const number=document.createElement('span');number.className='result-count';number.textContent=String(matches.length);const label=document.createElement('div');const b=document.createElement('b');b.textContent=matches.length===1?'competência em comum':'competências em comum';const small=document.createElement('small');small.textContent='Correspondências com o currículo';label.append(b,small);head.append(number,label);out.append(head);
- if(matches.length===0){const p=document.createElement('p');p.textContent='Nenhuma competência reconhecida neste texto. Experimente incluir tecnologias ou áreas de atuação. Veja também a trajetória e a caixa de ferramentas.';out.append(p);}
- matches.forEach(c=>{const row=document.createElement('div');row.className='evidence';const title=document.createElement('b');title.textContent=c[0];const evidence=document.createElement('p');evidence.textContent=c[2];const link=document.createElement('a');link.href=c[3];link.textContent='Ver evidência ↗';row.append(title,evidence,link);out.append(row);});
- if(pending.length){const box=document.createElement('div');box.className='confirm-box';const title=document.createElement('b');title.textContent='Pontos para conversar';box.append(title);pending.forEach(c=>{const p=document.createElement('p');p.textContent=`${c[0]}: ${c[2]}`;box.append(p);});out.append(box);}
- const note=document.createElement('p');note.className='micro';note.textContent='O comparador reconhece um conjunto definido de competências. Outros requisitos devem ser avaliados na conversa técnica.';out.append(note);
-});
