@@ -91,3 +91,8 @@
 .fit-table{font-size:14px}.fit-table th{font-size:11px}.fit-table td b{font-size:14px}.fit-table small{font-size:10px}.fit-table td:last-child{font-size:12px}.evidence-text a{font-size:11px}.level-bars+small{font-size:11px}
 #analysis-steps{font-size:13px}.fit-input .micro{font-size:13px;line-height:1.8}.methodology{font-size:12px!important}
 .job-date{font-size:14px;line-height:1.8}.job-date small{font-size:12px}
+
+.sdd-benefits{margin-top:18px}
+.network-diagram .backend-block span{white-space:normal;line-height:1.2}
+@media(min-width:901px){.network-diagram .system-block.backend-block{height:56px;min-height:56px;padding-top:3px;padding-bottom:5px}.backend-block b{line-height:1.2}}
+@media(max-width:620px){.network-diagram .system-block.backend-block{height:68px;min-height:68px}}
