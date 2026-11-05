@@ -9,7 +9,7 @@
  function resize(){
   width=Math.max(1,host.clientWidth);height=Math.max(1,host.clientHeight);canvas.width=width*2;canvas.height=height*2;ctx.setTransform(2,0,0,2,0,0);
   source.width=gray.width=dots.width=Math.ceil(width*2);source.height=gray.height=dots.height=Math.ceil(height*2);
-  const scale=Math.max(source.width/850,source.height/1120),w=850*scale,h=1120*scale;
+  const scale=Math.min(source.width/850,(source.height-16)/1120),w=850*scale,h=1120*scale;
   sctx.clearRect(0,0,source.width,source.height);sctx.imageSmoothingQuality='high';sctx.drawImage(img,160,0,850,1120,(source.width-w)/2,source.height-h,w,h);
   const frame=sctx.getImageData(0,0,source.width,source.height),pixels=frame.data;dctx.clearRect(0,0,dots.width,dots.height);dctx.fillStyle='#222629';
   for(let y=2;y<dots.height;y+=7)for(let x=2;x<dots.width;x+=7){const i=(y*dots.width+x)*4;if(pixels[i+3]<60)continue;const luminance=(pixels[i]*.2126+pixels[i+1]*.7152+pixels[i+2]*.0722)/255;dctx.beginPath();dctx.arc(x,y,(1-luminance)*3.1+.3,0,Math.PI*2);dctx.fill();}

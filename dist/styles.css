@@ -74,3 +74,6 @@
 .network-diagram .sdd-steps{margin-top:3px;font-size:8px}
 }
 @media(min-width:901px){.network-diagram .sdd-box{top:398px}.network-diagram .sdd-steps{line-height:1.4}}
+
+/* Reserve the opening viewport; the facts strip begins in the next section. */
+.hero{min-height:calc(100vh - 81px);min-height:calc(100svh - 81px)}
