@@ -7,7 +7,7 @@
  {name:'React',re:/\breact(?:js|\.js)?\b/,level:.9,weight:1,confidence:'Alta',evidence:'Interfaces React e uso de hooks na atuação full stack.',link:'#experiencia',category:'Frontend'},
  {name:'Vue / Nuxt',re:/\b(?:vue|nuxt)(?:js|\.js)?\b/,level:.9,weight:1,confidence:'Alta',evidence:'Desenvolvimento de interfaces Vue.js e Nuxt.',link:'#experiencia',category:'Frontend'},
  {name:'Node.js',re:/\bnode(?:\.?js)?\b/,level:.85,weight:1,confidence:'Alta',evidence:'Desenvolvimento backend com Node.js na atuação sênior.',link:'#experiencia',category:'Backend'},
- {name:'Java',re:/\bjava\b/,level:.6,weight:1,confidence:'Média',evidence:'Java declarado no conjunto de competências; profundidade a confirmar em conversa técnica.',link:'#certificados',category:'Backend'},
+ {name:'NestJS',re:/\bnest(?:js|\.js)?\b/,level:.6,weight:1,confidence:'Média',evidence:'NestJS declarado no conjunto de competências; profundidade a confirmar em conversa técnica.',link:'#certificados',category:'Backend'},
  {name:'APIs REST',re:/\b(?:apis?|rest|restful)\b/,level:.95,weight:2,confidence:'Alta',evidence:'Desenvolvimento e integração de APIs e serviços entre aplicações.',link:'#pratica',category:'Integrações'},
  {name:'Kafka / Eventos',re:/\b(?:kafka|eventos?|event.driven|mensageria)\b/,level:.85,weight:2,confidence:'Média',evidence:'Experiência declarada em arquitetura orientada a eventos e mensageria com Kafka.',link:'#pratica',category:'Integrações'},
  {name:'Webhooks',re:/\bwebhooks?\b/,level:.85,weight:1,confidence:'Média',evidence:'Desenvolvimento de webhooks para integração de sistemas.',link:'#pratica',category:'Integrações'},

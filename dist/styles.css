@@ -33,3 +33,21 @@
 @media(max-width:900px){.hero h1{font-size:90px}.agent-box small{font-size:11px}.agent-box b{font-size:13px}}
 @media(max-width:620px){.brand-orb{width:36px;height:32px;flex-basis:36px}.brand b{font-size:11px}.brand small{font-size:8px}.hero h1{font-size:clamp(57px,15vw,86px)}.network-diagram{height:650px!important}.network-diagram .scan-portrait{top:163px;height:440px}.agent-box{min-height:100px}.agent-box b{font-size:11px}.agent-box small{font-size:9px}.network-diagram .system-blocks{top:140px}.network-diagram .azure-block{min-height:110px}.azure-block span{font-size:10px!important}.azure-block small{font-size:8px}.network-diagram .system-block:not(.azure-block){height:64px;min-height:64px}.network-diagram .sdd-box{top:590px}.apps-panel{left:53%;right:3%;top:490px;padding:10px 7px}.apps-panel strong{font-size:31px}.apps-panel b{font-size:10px}.apps-panel>div:first-child{gap:8px}.apps-grid{grid-template-columns:repeat(20,minmax(0,1fr));gap:2px;margin-top:8px}.header-inner{gap:8px}.brand{gap:6px}}
 @media(prefers-reduced-motion:reduce){.apps-grid i{animation:none!important}}
+
+/* Compact connected portrait */
+.network-diagram{height:560px!important}
+.network-diagram .scan-portrait{left:3%;top:160px;width:43%;height:335px}
+.network-diagram .diagram-label{top:130px;font-size:8px}
+.agent-box{left:43%;right:3%;top:15px;min-height:84px;padding:12px}
+.agent-box b{font-size:14px;white-space:nowrap}.agent-box small{font-size:11px;white-space:nowrap}
+.network-diagram .system-blocks{left:49%;right:3%;top:115px;gap:11px}
+.network-diagram .system-block,.network-diagram .system-block:not(.azure-block),.network-diagram .azure-block{height:54px;min-height:54px;padding:8px 10px}
+.network-diagram .system-block span{white-space:nowrap;font-size:12px!important}
+.apps-panel{left:47%;right:3%;top:385px;padding:10px}
+.apps-grid{grid-template-columns:repeat(30,1fr);gap:2px;margin-top:10px}
+.apps-grid i{width:100%;height:auto;aspect-ratio:1;min-width:0}
+.network-diagram .sdd-box{left:49%;right:3%;top:485px}
+@media(min-width:901px) and (max-width:1150px){.hero{gap:28px}.agent-box{left:38%;padding:10px}.agent-box b{font-size:12px}.agent-box small{font-size:10px}.network-diagram .system-blocks{left:43%}.network-diagram .system-block span{font-size:10px!important}.apps-panel{left:43%}}
+@media(max-width:620px){.network-diagram{height:530px!important}.agent-box{left:28%;right:3%;min-height:84px;padding:10px}.agent-box b{font-size:12px}.agent-box small{font-size:9px}.network-diagram .system-blocks{left:40%;right:3%;top:115px}.network-diagram .system-block,.network-diagram .system-block:not(.azure-block),.network-diagram .azure-block{padding:8px 7px;height:54px;min-height:54px}.network-diagram .system-block span{font-size:9px!important}.network-diagram .scan-portrait{left:1%;top:175px;width:38%;height:280px}.network-diagram .diagram-label{top:145px;font-size:5px;left:3%}.apps-panel{left:40%;right:3%;top:385px;padding:9px 7px}.apps-panel strong{font-size:30px}.apps-panel b{font-size:9px}.apps-panel>div:first-child{gap:7px}.apps-grid{grid-template-columns:repeat(20,1fr);gap:2px}.network-diagram .sdd-box{left:40%;right:3%;top:475px}.network-diagram .sdd-steps{font-size:6px}}
+.apps-grid{grid-template-columns:repeat(30,6px);justify-content:space-between}.apps-grid i{width:6px;height:6px}@media(max-width:620px){.apps-grid{grid-template-columns:repeat(20,6px)}}
+@media(min-width:901px) and (max-width:1250px){.apps-grid{grid-template-columns:repeat(20,6px)}}@media(max-width:360px){.apps-grid{grid-template-columns:repeat(20,5px)}.apps-grid i{width:5px;height:5px}.agent-box small{font-size:8px}.network-diagram .system-block span{font-size:8px!important}}
