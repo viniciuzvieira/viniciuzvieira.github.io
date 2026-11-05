@@ -1,4 +1,4 @@
-# Vinícius Silva
+# Vinícius Vieira
 
 Desenvolvedor sênior full stack em São Paulo. Software, integrações e IA orientada por especificações.
 
