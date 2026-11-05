@@ -29,7 +29,7 @@
  }
  function frame(now){if(!last)last=now;if(!paused&&!document.hidden)time+=Math.min(now-last,60);last=now;draw();requestAnimationFrame(frame);}
  host.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const r=canvas.getBoundingClientRect();hover={x:e.clientX-r.left,y:e.clientY-r.top};draw();});host.addEventListener('pointerleave',()=>{hover=null;draw();});
- function sync(){button.setAttribute('aria-pressed',String(paused));button.textContent=paused?'▷ Animar diagrama':'Ⅱ Pausar diagrama';document.querySelectorAll('.wires').forEach(s=>paused?s.pauseAnimations():s.unpauseAnimations());}
+ function sync(){button.setAttribute('aria-pressed',String(paused));button.textContent=paused?'▷ Animar':'Ⅱ Pausar';document.querySelectorAll('.wires').forEach(s=>paused?s.pauseAnimations():s.unpauseAnimations());}
  button.addEventListener('click',()=>{paused=!paused;sync();draw();});preference.addEventListener('change',e=>{paused=e.matches;sync();draw();});
  img.onload=()=>{ready=true;resize();new ResizeObserver(resize).observe(host);sync();requestAnimationFrame(frame);};img.src='assets/vinicius-transparent.png';
 })();
