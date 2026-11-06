@@ -96,3 +96,9 @@
 .network-diagram .backend-block span{white-space:normal;line-height:1.2}
 @media(min-width:901px){.network-diagram .system-block.backend-block{height:56px;min-height:56px;padding-top:3px;padding-bottom:5px}.backend-block b{line-height:1.2}}
 @media(max-width:620px){.network-diagram .system-block.backend-block{height:68px;min-height:68px}}
+/* Shareable Portuguese and English editions. */
+.language-switch{display:flex;gap:2px;flex-shrink:0;border:1px solid var(--line);padding:2px}.language-switch a{font:11px/1.4 var(--mono);padding:5px 6px}.language-switch a[aria-current=true]{background:var(--rust);color:#fff}.language-switch a:focus-visible{outline-offset:1px}
+@media(max-width:1150px) and (min-width:901px){nav{gap:10px}.header-inner{gap:10px}nav a{font-size:11px}.brand b{font-size:12px}}
+@media(max-width:620px){.language-switch a{font-size:10px;padding:4px}.header-inner{gap:6px}.header-cv{display:none}.brand b{font-size:11px}.brand small{font-size:9px}}
+html[lang=en] .agent-box small{font-size:10px}
+@media(max-width:620px){html[lang=en] .agent-box small{font-size:8px}}

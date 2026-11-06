@@ -47,3 +47,9 @@ O workflow `.github/workflows/pages.yml` publica a pasta `dist` a cada alteraç�
 As datas da trajetória foram conferidas no LinkedIn e a conclusão da graduação segue o certificado do Senac (2019). O curso preparatório de AWS é identificado como curso, separado da certificação Microsoft AZ-900.
 
 Projeto produzido com apoio do Claude Code e Codex. Não há conteúdo ou credenciais de projetos corporativos neste repositório.
+
+## Languages
+
+Portuguese is the default. [English edition](https://viniciuzvieira.github.io/?lang=en) has its own translated CV, with a link that opens the English website. Use the PT / EN switch in the header.
+
+After changing Portuguese content, update translations in `scripts/build_english.py` and run it with Python. Generate the Portuguese CV with `scripts/design_cv.py`, then the English CV with `scripts/build_english_cv.py` (ReportLab and pypdf required). The original credential images are preserved.
