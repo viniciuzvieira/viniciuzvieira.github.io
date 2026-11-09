@@ -9,8 +9,9 @@
  function resize(){
   width=Math.max(1,host.clientWidth);height=Math.max(1,host.clientHeight);canvas.width=width*2;canvas.height=height*2;ctx.setTransform(2,0,0,2,0,0);
   source.width=gray.width=dots.width=Math.ceil(width*2);source.height=gray.height=dots.height=Math.ceil(height*2);
-  const scale=Math.min(source.width/850,(source.height-16)/1120),w=850*scale,h=1120*scale;
-  sctx.clearRect(0,0,source.width,source.height);sctx.imageSmoothingQuality='high';sctx.drawImage(img,160,0,850,1120,(source.width-w)/2,source.height-h,w,h);
+  const cropWidth=width<200?650:850,cropX=width<200?250:160;
+  const scale=Math.min(source.width/cropWidth,(source.height-16)/1120),w=cropWidth*scale,h=1120*scale;
+  sctx.clearRect(0,0,source.width,source.height);sctx.imageSmoothingQuality='high';sctx.drawImage(img,cropX,0,cropWidth,1120,(source.width-w)/2,source.height-h,w,h);
   const frame=sctx.getImageData(0,0,source.width,source.height),pixels=frame.data;dctx.clearRect(0,0,dots.width,dots.height);dctx.fillStyle='#222629';
   for(let y=2;y<dots.height;y+=7)for(let x=2;x<dots.width;x+=7){const i=(y*dots.width+x)*4;if(pixels[i+3]<60)continue;const luminance=(pixels[i]*.2126+pixels[i+1]*.7152+pixels[i+2]*.0722)/255;dctx.beginPath();dctx.arc(x,y,(1-luminance)*3.1+.3,0,Math.PI*2);dctx.fill();}
   dctx.globalCompositeOperation='destination-in';dctx.drawImage(source,0,0);dctx.globalCompositeOperation='source-over';
@@ -29,7 +30,7 @@
  }
  function frame(now){if(!last)last=now;if(!paused&&!document.hidden)time+=Math.min(now-last,60);last=now;draw();requestAnimationFrame(frame);}
  host.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const r=canvas.getBoundingClientRect();hover={x:e.clientX-r.left,y:e.clientY-r.top};draw();});host.addEventListener('pointerleave',()=>{hover=null;draw();});
- function sync(){button.setAttribute('aria-pressed',String(paused));button.textContent=paused?'▷ Animar':'Ⅱ Pausar';document.querySelectorAll('.wires').forEach(s=>paused?s.pauseAnimations():s.unpauseAnimations());}
+ function sync(){button.setAttribute('aria-pressed',String(paused));const icon=document.createElement('span');icon.className='motion-icon '+(paused?'is-play':'is-pause');icon.setAttribute('aria-hidden','true');const label=document.createElement('span');label.textContent=paused?'Animar':'Pausar';button.replaceChildren(icon,label);document.querySelectorAll('.wires').forEach(s=>paused?s.pauseAnimations():s.unpauseAnimations());}
  button.addEventListener('click',()=>{paused=!paused;sync();draw();});preference.addEventListener('change',e=>{paused=e.matches;sync();draw();});
  img.onload=()=>{ready=true;resize();new ResizeObserver(resize).observe(host);sync();requestAnimationFrame(frame);};img.src='assets/vinicius-transparent.png';
 })();
