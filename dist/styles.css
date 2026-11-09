@@ -136,3 +136,8 @@ html[lang=en] .agent-box small{font-size:10px}
 
 @media(max-width:620px){.network-diagram .scan-portrait{top:16px;height:260px}.network-diagram .apps-panel{left:3%;right:3%;top:291px}.apps-grid{grid-template-columns:repeat(30,minmax(0,1fr))}.apps-panel b{font-size:11px}.apps-panel>div:first-child{gap:10px}}
 @media(max-width:360px){.agent-box b{font-size:14px}.agent-box span{font-size:9px}.agent-box small,html[lang=en] .agent-box small{font-size:7px}.network-diagram .agent-box{padding:6px 7px}}
+/* Consistent card headings across screen sizes and languages. */
+.network-diagram .agent-box b,.network-diagram .system-block b{font:700 15px/1.1 var(--sans);letter-spacing:-.2px;white-space:normal}
+@media(min-width:901px){.network-diagram .system-block,.network-diagram .system-block:not(.azure-block),.network-diagram .azure-block{padding-top:3px;padding-bottom:6px}}
+@media(max-width:620px){.network-diagram .agent-box b,.network-diagram .system-block b{font-size:14px;line-height:1.1}}
+@media(max-width:360px){.network-diagram .agent-box b,.network-diagram .system-block b{font-size:12px}}
