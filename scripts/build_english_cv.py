@@ -4,7 +4,8 @@ base=Path(__file__).resolve().parent
 lang=runpy.run_path(str(base/'build_english.py'))
 pairs=lang['pairs'].copy()
 more='''
-11 anos de experiência com PHP. Atuação fullstack na Reply Brasil desde 2019, desenvolvendo APIs .NET e NestJS e integrações entre interfaces e dados. Azure desde 2019, com AZ-900, e AWS: Lambda, S3 e SQS. Arquitetura orientada a eventos com Kafka e webhooks. Desenvolvimento com IA orientado por especificações, revisão e critérios de aceitação.|11 years of PHP experience. Fullstack development at Reply Brasil since 2019, building .NET and NestJS APIs and integrating interfaces and data. Azure since 2019, with AZ-900 certification, and AWS Lambda, S3 and SQS. Event-driven architecture with Kafka and webhooks. Specification-guided AI-assisted development, code review and acceptance criteria.
+11 anos de experiência com PHP e .NET.|11 years of experience with PHP and .NET.
+11 anos de experiência com PHP e .NET. Atuação fullstack na Reply Brasil desde 2019, desenvolvendo APIs .NET e NestJS e integrações entre interfaces e dados. Azure desde 2019, com AZ-900, e AWS: Lambda, S3 e SQS. Arquitetura orientada a eventos com Kafka e webhooks. Desenvolvimento com IA orientado por especificações, revisão e critérios de aceitação.|11 years of experience with PHP and .NET. Fullstack development at Reply Brasil since 2019, building .NET and NestJS APIs and integrating interfaces and data. Azure since 2019, with AZ-900 certification, and AWS Lambda, S3 and SQS. Event-driven architecture with Kafka and webhooks. Specification-guided AI-assisted development, code review and acceptance criteria.
 PHP (11 anos)|PHP (11 years)
 CURRÍCULO / ENGENHARIA DE SOFTWARE|RESUME / SOFTWARE ENGINEERING
 Visite viniciuzvieira.github.io|Visit viniciuzvieira.github.io
@@ -45,7 +46,7 @@ for t in tokenize.generate_tokens(io.StringIO(s).readline):
   try:
    value=ast.literal_eval(t.string)
    if isinstance(value,str):
-    value=tr(value).replace('Vinicius_Vieira_CV.pdf','Vinicius_Vieira_CV_EN.pdf').replace('https://viniciuzvieira.github.io/','https://viniciuzvieira.github.io/?lang=en')
+    value=tr(value).replace(' anos)', ' years)').replace('Vinicius_Vieira_CV.pdf','Vinicius_Vieira_CV_EN.pdf').replace('https://viniciuzvieira.github.io/','https://viniciuzvieira.github.io/?lang=en')
     t=t._replace(string=repr(value))
   except (ValueError,SyntaxError):pass
  tokens.append(t)

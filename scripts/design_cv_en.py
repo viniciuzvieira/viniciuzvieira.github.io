@@ -41,13 +41,13 @@ y=section(x,y,w,'01','CONTACT')
 for label,url in [('vinicius.silva@zcore.com.br','mailto:vinicius.silva@zcore.com.br'),('LinkedIn / viniciuzvieira','https://www.linkedin.com/in/viniciuzvieira/'),('GitHub / viniciuzvieira','https://github.com/viniciuzvieira'),('viniciuzvieira.github.io','https://viniciuzvieira.github.io/?lang=en')]:
  y=para(x,y,w,f'<link href="{url}">{label}</link>',8,12)-6
 y-=8;y=section(x,y,w,'02','SKILLS')
-for title,body in [('Backend','PHP (11 years) · .NET · NestJS · Python · APIs REST'),('Frontend','React · Vue.js · Nuxt · Angular'),('Events & integrations','Kafka · Webhooks'),('Data','SQL Server · PostgreSQL · Oracle · MongoDB · Firebase · Cosmos DB'),('Cloud','Microsoft Azure since 2019 · AZ-900. AWS: Lambda, S3 and SQS.'),('Applied AI','Claude Code and Codex · SDD · OpenSpec · proposals, delta specs, design, tasks, verify and archive.')]:
+for title,body in [('Backend','PHP (11 years) · .NET (11 years) · NestJS (5 years) · Python (3 years) · APIs REST (12 years)'),('Frontend','React (8 years) · Vue.js (3 years) · Nuxt (3 years) · Angular (8 years)'),('Events & integrations','Kafka (2 years) · Webhooks (3 years)'),('Data','SQL Server (13 years) · PostgreSQL (4 years) · Oracle (2 years) · MongoDB (3 years) · Firebase (2 years) · Cosmos DB (2 years)'),('Cloud','Microsoft Azure since 2019 · AZ-900. AWS: Lambda, S3 and SQS.'),('Applied AI','Claude Code and Codex · SDD · OpenSpec · proposals, delta specs, design, tasks, verify and archive.')]:
  y=para(x,y,w,title,9,12,font='SansB')-3;y=para(x,y,w,body,8.4,12,color=muted)-13
 y=section(x,y,w,'03','LANGUAGE');y=para(x,y,w,'Advanced English',9,13)
 # Main editorial column.
 x=224;w=331;y=644
 y=section(x,y,w,'04','PROFILE')
-y=para(x,y,w,'11 years of PHP experience. Fullstack development at Reply Brasil since 2019, building .NET and NestJS APIs and integrating interfaces and data. Azure since 2019, with AZ-900 certification, and AWS Lambda, S3 and SQS. Event-driven architecture with Kafka and webhooks. Specification-guided AI-assisted development, code review and acceptance criteria.',9.2,13)-18
+y=para(x,y,w,'11 years of experience with PHP and .NET. Fullstack development at Reply Brasil since 2019, building .NET and NestJS APIs and integrating interfaces and data. Azure since 2019, with AZ-900 certification, and AWS Lambda, S3 and SQS. Event-driven architecture with Kafka and webhooks. Specification-guided AI-assisted development, code review and acceptance criteria.',9.2,13)-18
 y=section(x,y,w,'05','EXPERIENCE')
 for title,date,body in [
 ('Senior Fullstack Developer','REPLY · JAN. 2022 - PRESENT','.NET and Node.js APIs and services integrated with React, Vue.js and Nuxt. React interfaces with hooks. Event-driven architecture with Kafka and webhooks. Claude Code and Codex with OpenSpec and SDD for specification, implementation, review and validation.'),

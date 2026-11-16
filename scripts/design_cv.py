@@ -41,13 +41,13 @@ y=section(x,y,w,'01','CONTATO')
 for label,url in [('vinicius.silva@zcore.com.br','mailto:vinicius.silva@zcore.com.br'),('LinkedIn / viniciuzvieira','https://www.linkedin.com/in/viniciuzvieira/'),('GitHub / viniciuzvieira','https://github.com/viniciuzvieira'),('viniciuzvieira.github.io','https://viniciuzvieira.github.io/')]:
  y=para(x,y,w,f'<link href="{url}">{label}</link>',8,12)-6
 y-=8;y=section(x,y,w,'02','COMPETÊNCIAS')
-for title,body in [('Backend','PHP (11 anos) · .NET · NestJS · Python · APIs REST'),('Frontend','React · Vue.js · Nuxt · Angular'),('Eventos & integrações','Kafka · Webhooks'),('Dados','SQL Server · PostgreSQL · Oracle · MongoDB · Firebase · Cosmos DB'),('Cloud','Microsoft Azure desde 2019 · AZ-900. AWS: Lambda, S3 e SQS.'),('IA aplicada','Claude Code e Codex · SDD · OpenSpec · proposal, delta specs, design, tasks, verify e archive.')]:
+for title,body in [('Backend','PHP (11 anos) · .NET (11 anos) · NestJS (5 anos) · Python (3 anos) · APIs REST (12 anos)'),('Frontend','React (8 anos) · Vue.js (3 anos) · Nuxt (3 anos) · Angular (8 anos)'),('Eventos & integrações','Kafka (2 anos) · Webhooks (3 anos)'),('Dados','SQL Server (13 anos) · PostgreSQL (4 anos) · Oracle (2 anos) · MongoDB (3 anos) · Firebase (2 anos) · Cosmos DB (2 anos)'),('Cloud','Microsoft Azure desde 2019 · AZ-900. AWS: Lambda, S3 e SQS.'),('IA aplicada','Claude Code e Codex · SDD · OpenSpec · proposal, delta specs, design, tasks, verify e archive.')]:
  y=para(x,y,w,title,9,12,font='SansB')-3;y=para(x,y,w,body,8.4,12,color=muted)-13
 y=section(x,y,w,'03','IDIOMA');y=para(x,y,w,'Inglês avançado',9,13)
 # Main editorial column.
 x=224;w=331;y=644
 y=section(x,y,w,'04','PERFIL')
-y=para(x,y,w,'11 anos de experiência com PHP. Atuação fullstack na Reply Brasil desde 2019, desenvolvendo APIs .NET e NestJS e integrações entre interfaces e dados. Azure desde 2019, com AZ-900, e AWS: Lambda, S3 e SQS. Arquitetura orientada a eventos com Kafka e webhooks. Desenvolvimento com IA orientado por especificações, revisão e critérios de aceitação.',9.2,13)-22
+y=para(x,y,w,'11 anos de experiência com PHP e .NET. Atuação fullstack na Reply Brasil desde 2019, desenvolvendo APIs .NET e NestJS e integrações entre interfaces e dados. Azure desde 2019, com AZ-900, e AWS: Lambda, S3 e SQS. Arquitetura orientada a eventos com Kafka e webhooks. Desenvolvimento com IA orientado por especificações, revisão e critérios de aceitação.',9.2,13)-22
 y=section(x,y,w,'05','EXPERIÊNCIA')
 for title,date,body in [
 ('Desenvolvedor Sênior / Fullstack','REPLY · JAN. 2022 - ATUAL','APIs e serviços .NET e Node.js integrados a React, Vue.js e Nuxt. Interfaces React com hooks. Arquitetura orientada a eventos com Kafka e webhooks. Claude Code e Codex com OpenSpec e SDD para especificação, implementação, revisão e validação.'),
