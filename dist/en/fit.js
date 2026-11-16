@@ -2,6 +2,7 @@
 (()=>{
  const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  const skills=[
+ {name:'PHP',re:/\bphp\b/,level:.9,weight:2,confidence:"Medium",evidence:"11 years of PHP experience, as declared. Projects and scope to be discussed in an interview.",link:'#inicio',category:'Backend'},
  {name:'Microsoft Azure',re:/\b(?:azure|az-900)\b/,level:1,weight:3,confidence:"High",evidence:"Working with Azure since 2019; Microsoft Certified: Azure Fundamentals (AZ-900).",link:'#certificados',category:'Cloud'},
  {name:'.NET / C#',re:/(?:\.net|dotnet|c#|csharp)/,level:.95,weight:2,confidence:"High",evidence:"Developing .NET APIs and services at Reply since 2019.",link:'#experiencia',category:'Backend'},
  {name:'React',re:/\breact(?:js|\.js)?\b/,level:.9,weight:1,confidence:"High",evidence:"React interfaces and hooks in fullstack development.",link:'#experiencia',category:'Frontend'},

@@ -1,7 +1,7 @@
 from pathlib import Path
 import re,json,ast
 root=Path(__file__).resolve().parent.parent
-pairs={}
+pairs={'11 anos de experiência com PHP, conforme informação declarada. Projetos e escopo a detalhar em entrevista.':'11 years of PHP experience, as declared. Projects and scope to be discussed in an interview.','Tenho 11 anos de experiência com PHP.':'I have 11 years of PHP experience.','PHP (11 anos)':'PHP (11 years)'}
 def add(lines):
  for line in lines.strip().splitlines():
   a,b=line.split('|',1);pairs[a]=b

@@ -2,6 +2,7 @@
 (()=>{
  const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  const skills=[
+ {name:'PHP',re:/\bphp\b/,level:.9,weight:2,confidence:'Média',evidence:'11 anos de experiência com PHP, conforme informação declarada. Projetos e escopo a detalhar em entrevista.',link:'#inicio',category:'Backend'},
  {name:'Microsoft Azure',re:/\b(?:azure|az-900)\b/,level:1,weight:3,confidence:'Alta',evidence:'Atuação com Azure desde 2019 e certificação Microsoft Certified: Azure Fundamentals (AZ-900).',link:'#certificados',category:'Cloud'},
  {name:'.NET / C#',re:/(?:\.net|dotnet|c#|csharp)/,level:.95,weight:2,confidence:'Alta',evidence:'Desenvolvimento de APIs e serviços .NET na Reply desde 2019.',link:'#experiencia',category:'Backend'},
  {name:'React',re:/\breact(?:js|\.js)?\b/,level:.9,weight:1,confidence:'Alta',evidence:'Interfaces React e uso de hooks na atuação full stack.',link:'#experiencia',category:'Frontend'},
